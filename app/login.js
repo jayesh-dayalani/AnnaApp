@@ -43,7 +43,7 @@ const Login = () => {
         <View className='flex-1 bg-teal-50 p-6'>
             <View className='flex-1 justify-center'>
                 <Text className='text-3xl font-bold text-teal-600 mb-6 text-center'>
-                    Doctor's Portal
+                    Vaibhav Anna
                 </Text>
                 <View className='bg-white p-6 rounded-xl shadow-lg'>
                     <Text className='text-lg font-semibold text-teal-700 mb-4'>

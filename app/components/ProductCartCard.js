@@ -1,6 +1,6 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { incrementMyQuantity, decrementMyQuantity } from '../../redux/cartSlice';
 
 export default function ProductCardCart({ data }) {
@@ -22,15 +22,15 @@ export default function ProductCardCart({ data }) {
             <View className='w-1/4'>
                 <Image
                     source={{ uri: data.image ?? 'default-image-url' }}
-                    className='w-full h-24 rounded-lg'
-                    resizeMode='cover'
+                    className='w-full h-14 rounded-lg bg-white'
+                    resizeMode='contain'
                 />
             </View>
 
             {/* Center with product details */}
             <View className='w-1/2 px-2'>
-                <Text className='text-lg font-bold'>{data?.name ?? 'No Name Available'}</Text>
-                <Text className='text-lg font-bold mt-1'>Rs. {data?.price ?? 'N/A'} /-</Text>
+                <Text className='text-xl font-bold'>{data?.name ?? 'No Name Available'}</Text>
+                <Text className='text-lg font-bold text-green-600'>{data?.quantity} {data?.qty ?? 'N/A'}</Text>
             </View>
 
             {/* Right side with quantity control */}

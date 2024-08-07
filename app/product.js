@@ -12,7 +12,7 @@ export default function Product() {
 
     const fetchDawamaster = async () => {
         try {
-            const { data, error } = await supabase.from('master_products').select('*');
+            const { data, error } = await supabase.from('anna_products').select('*');
             if (error) throw error;
             setMasterProducts(data);
         } catch (error) {
